@@ -29,8 +29,8 @@ jobs:
         sed -i "s|DB_USERNAME=.*|DB_USERNAME=${{ secrets.DB_USERNAME }}|" .env
         sed -i "s|DB_PASSWORD=.*|DB_PASSWORD=${{ secrets.DB_PASSWORD }}|" .env
 
-    - name: Config Cache
-      run: php artisan config:cache
+    # - name: Config Cache
+    #   run: php artisan config:cache
 
     - name: Update Composer dependencies
       run: composer update --prefer-dist --no-progress --no-suggest
